@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CUESTIONARIO</title>
+    <script src="jspdf.min.js"></script>
+    <script>
+      var doc = new jsPDF();
+      //----------------------------------------------------------------------
+      function normalNegro(){
+        doc.setFontType("normal");
+        doc.setTextColor(0);
+      }
+      function italicAzul(){
+        doc.setFontType("italic");
+        doc.setTextColor(0,0,255); //color azul
+      }
+      function creaPDF(){
+        doc.setFont("Courier");
+        doc.setFontSize(15);
+        doc.text(51,10,"EVALUACIÓN DE LA PRÁCTICA DOCENTE");
+        doc.setLineWidth(1);
+        doc.line(7,12,202,12);
+        //----------------------------------------------------------------------
+        var dCurso, dFecha, dMateria;
+        dCurso = formulario_1.curso.value;
+        dFecha = formulario_1.fecha.value;
+        dMateria = formulario_1.materia.value;
+        doc.setFont("Time New Romans");
+        doc.setFontSize(11);
+        doc.text(7,18,"Nombre del profesor: José A. Delgado Gorrín");
+        doc.text(7,23,"Curso: "); doc.text(20,23,dCurso);
+        doc.text(90,23,"Fecha: "); doc.text(103,23,dFecha);
+        doc.text(170,23,"Materia: "); doc.text(185,23,dMateria);
+        doc.setLineWidth(0.5);
+        doc.line(7,27,202,27);
+        //----------------------------------------------------------------------
+        var dPreg1, dPreg2, dPreg3, dPreg4, dPreg5, dPreg6, dPreg7, dPreg8, dPreg9, dPreg10;
+        var dPreg11,dPreg12,dPreg13,dPreg14,dPreg14,dPreg15,dPreg16,dPreg17,dPreg18,dPreg19,dPreg20;
+        dPreg1 = formulario_2.valor1.value;   dPreg11 = formulario_2.valor11.value;
+        dPreg2 = formulario_2.valor2.value;   dPreg12 = formulario_2.valor12.value;
+        dPreg3 = formulario_2.valor3.value;   dPreg13 = formulario_2.valor13.value;
+        dPreg4 = formulario_2.valor4.value;   dPreg14 = formulario_2.valor14.value;
+        dPreg5 = formulario_2.valor5.value;   dPreg15 = formulario_2.valor15.value;
+        dPreg6 = formulario_2.valor6.value;   dPreg16 = formulario_2.valor16.value;
+        dPreg7 = formulario_2.valor7.value;   dPreg17 = formulario_2.valor17.value;
+        dPreg8 = formulario_2.valor8.value;   dPreg18 = formulario_2.valor18.value;
+        dPreg9 = formulario_2.valor9.value;   dPreg19 = formulario_2.valor19.value;
+        dPreg10 = formulario_2.valor10.value; dPreg20 = formulario_2.valor20.value;
+        var x=180;
+        doc.text(7,32,"1) Las explicaciones se entienden con claridad: ");
+        italicAzul();
+        doc.text(x,32,dPreg1);
+        normalNegro();
+        doc.text(7,37,"2) Responde de forma adecuada a las preguntas planteadas: ");
+        italicAzul();
+        doc.text(x,37,dPreg2);
+        normalNegro();
+        doc.text(7,42,"3) Es puntual, llega y termina a su hora:");
+        italicAzul();
+        doc.text(x,42,dPreg3);
+        normalNegro();
+        doc.text(7,47,"4) Se aprovecha todo el tiempo de clase:");
+        italicAzul();
+        doc.text(x,47,dPreg4);
+        normalNegro();
+        doc.text(7,52,"5) Permite la participación del alumnado:");
+        italicAzul();
+        doc.text(x,52,dPreg5);
+        normalNegro();
+        doc.text(7,57,"6) Motiva e intenta hacer la clase amena y divertida:");
+        italicAzul();
+        doc.text(x,57,dPreg6);
+        normalNegro();
+        doc.text(7,62,"7) Mantiene el interés del alumnado:");
+        italicAzul();
+        doc.text(x,62,dPreg7);
+        normalNegro();
+        doc.text(7,67,"8) Es adecuada la cantidad de trabajo que manda para realizar en casa:");
+        italicAzul();
+        doc.text(x,67,dPreg8);
+        normalNegro();
+        doc.text(7,72,"9) Es adecuada el tiempo que da para realizar los trabajos:");
+        italicAzul();
+        doc.text(x,72,dPreg9);
+        normalNegro();
+        doc.text(7,77,"10) Atiende a las peticiones del alumnado cuando son razonables:");
+        italicAzul();
+         doc.text(x,77,dPreg10);
+         normalNegro();
+        doc.text(7,82,"11) Se preocupa por el rendimiento del alumnado:");
+        italicAzul();
+        doc.text(x,82,dPreg11);
+        normalNegro();
+        doc.text(7,87,"12) No discrimina a ningún alumno/a ni establece favoritismos:");
+        italicAzul();
+        doc.text(x,87,dPreg12);
+        normalNegro();
+        doc.text(7,92,"13) Acepta las críticas del alumnado:");
+        italicAzul();
+        doc.text(x,92,dPreg13);
+        normalNegro();
+        doc.text(7,97,"14) Trata a los alumnos con respeto:");
+        italicAzul();
+        doc.text(x,97,dPreg14);
+        normalNegro();
+        doc.text(7,102,"15) Te parece suficiente la comunicación profesor - alumno:");
+        italicAzul();
+        doc.text(x,102,dPreg15);
+        normalNegro();
+        doc.text(7,107,"16) Explica al inicio del curso los criterios de calificación que se van a aplicar:");
+        italicAzul();
+        doc.text(x,107,dPreg16);
+        normalNegro();
+        doc.text(7,112,"17) Los contenidos de los exámenes o pruebas se ajustan a lo trabajado en clase:");
+        italicAzul();
+        doc.text(x,112,dPreg17);
+        normalNegro();
+        doc.text(7,117,"18) Valora todo el trabajo del alumnado:");
+        italicAzul();
+        doc.text(x,117,dPreg18);
+        normalNegro();
+        doc.text(7,122,"19) Enseña y comenta las pruebas escritas:");
+        italicAzul();
+        doc.text(x,122,dPreg19);
+        normalNegro();
+        doc.text(7,127,"20) Las notas que pone se ajustan a los criterios de calificación:");
+        italicAzul();
+        doc.text(x,127,dPreg20);
+        //----------------------------------------------------------------------
+        doc.setLineWidth(0.5);
+        doc.line(7,132,202,132);
+        //----------------------------------------------------------------------
+        var dPreg21, dPreg22, dPreg23, dPreg24, dPReg25;
+        dPreg21 = formulario_3.areatxt1.value;
+        dPreg22 = formulario_3.areatxt2.value;
+        dPreg23 = formulario_3.areatxt3.value;
+        dPreg24 = formulario_3.areatxt4.value;
+        dPreg25 = formulario_3.areatxt5.value;
+        normalNegro();
+        doc.text(7,140,"21) ¿Qué es lo que más de ha gustando de esta materia?");
+        italicAzul();
+        doc.text(8,145,dPreg21);
+        normalNegro();
+        doc.text(7,168,"22) ¿Qué es lo que menos te ha gustado?");
+        italicAzul();
+        doc.text(8,173,dPreg22);
+        normalNegro();
+        doc.text(7,194,"23) ¿Qué actividades incluirás o quitarías de clase?");
+        italicAzul();
+        doc.text(8,199,dPreg23);
+        normalNegro();
+        doc.text(7,219,"24) ¿Crees que el docente podría haber hecho algo más para que sacaras mejor nota o aprobaras?");
+        italicAzul();
+        doc.text(8,224,dPreg24);
+        normalNegro();
+        doc.text(7,244,"25) Escribe cualquier otro comentario, crítica o sugerencia para mejorar la clase, la asignatura o el Centro:");
+        italicAzul();
+        doc.text(8,249,dPreg25);
+        //----------------------------------------------------------------------
+        doc.save('encuestaEvDocente.pdf');
+      }
+    </script>
+    <style media="screen">
+        #cabecera{
+          font: bold 23px Verdana, sans-serif;
+          text-align: center;
+          color: #8904B1;
+        }
+        #seccion_1{
+          background-color: #CEF6E3;
+        }
+        #seccion_2{
+          font-size: 17px;
+          text-align: center;
+          color: #08088A
+        }
+        #seccion_3{
+          background-color: #B5BEEA;
+        }
+        #seccion_4{
+          background-color: #B5BEEA;
+        }
+
+        legend{
+          font: bold 15px Verdana, sans-serif;
+        }
+        main{
+          color: #08088A;
+        }
+    </style>
+  </head>
+  <body>
+      <header id="cabecera">
+          <h3><b>EVALUACIÓN DE LA PRÁCTICA DOCENTE</b></h3>
+      </header>
+        <main>
+          <section id="seccion_1">
+            <fieldset>
+              <legend>Datos</legend>
+              <form class="formulario_1" name="formulario_1" action="index.html" method="post">
+                <p>
+                    <label for="nombre">Nombre del Profesor:</label>
+                    <input type="text" name="nombre" id="nombre" value="José A. Delgado">
+                    <br><br>
+                    <label for="curso">Curso:</label>
+                    <input type="text" name="curso" id="curso" value="" maxlength="10">
+                    <label for="fecha"> Fecha:</label>
+                    <input type="text" name="fecha" id="fecha" value="" maxlength="10">
+                    <label for="materia"> Materia:</label>
+                    <input type="text" name="materia" id="materia" value="" maxlength="15">
+                </p>
+              </form>
+            </fieldset>
+          </section>
+          <section id="seccion_2">
+            <p>
+                Valora del <b>1</b> a <b>4</b> tu grado de acuerdo con las siguientes afirmaciones siendo 1 la menor puntuación y 4 la máxima.
+            </p>
+          </section>
+          <section id="seccion_3">
+            <fieldset>
+              <legend>Preguntas Selección Simple</legend>
+              <form class="formulario_2" name="formulario_2" action="index.html" method="post">
+                <br>
+                    <label for="preg1">1) Las explicaciones se entienden con claridad:</label>
+                      <label for="valor1"><input type="radio" name="valor1" value="1">1</label>
+                      <label for="valor1"><input type="radio" name="valor1" value="2">2</label>
+                      <label for="valor1"><input type="radio" name="valor1" value="3">3</label>
+                      <label for="valor1"><input type="radio" name="valor1" value="4">4</label>
+                    <br><br>
+                      <label for="preg2">2) Responde de forma adecuada a las preguntas planteadas:</label>
+                      <label for="valor2"><input type="radio" name="valor2" value="1">1</label>
+                      <label for="valor2"><input type="radio" name="valor2" value="2">2</label>
+                      <label for="valor2"><input type="radio" name="valor2" value="3">3</label>
+                      <label for="valor2"><input type="radio" name="valor2" value="4">4</label>
+                    <br><br>
+                      <label for="preg3">3) Es puntual, llega y termina a su hora:</label>
+                      <label for="valor3"><input type="radio" name="valor3" value="1">1</label>
+                      <label for="valor3"><input type="radio" name="valor3" value="2">2</label>
+                      <label for="valor3"><input type="radio" name="valor3" value="3">3</label>
+                      <label for="valor3"><input type="radio" name="valor3" value="4">4</label>
+                    <br><br>
+                      <label for="preg4">4) Se aprovecha todo el tiempo de clase:</label>
+                      <label for="valor4"><input type="radio" name="valor4" value="1">1</label>
+                      <label for="valor4"><input type="radio" name="valor4" value="2">2</label>
+                      <label for="valor4"><input type="radio" name="valor4" value="3">3</label>
+                      <label for="valor4"><input type="radio" name="valor4" value="4">4</label>
+                    <br><br>
+                      <label for="preg5">5) Permite la participación del alumnado:</label>
+                      <label for="valor5"><input type="radio" name="valor5" value="1">1</label>
+                      <label for="valor5"><input type="radio" name="valor5" value="2">2</label>
+                      <label for="valor5"><input type="radio" name="valor5" value="3">3</label>
+                      <label for="valor5"><input type="radio" name="valor5" value="4">4</label>
+                    <br><br>
+                      <label for="preg6">6) Motiva e intenta hacer la clase amena y divertida:</label>
+                      <label for="valor6"><input type="radio" name="valor6" value="1">1</label>
+                      <label for="valor6"><input type="radio" name="valor6" value="2">2</label>
+                      <label for="valor6"><input type="radio" name="valor6" value="3">3</label>
+                      <label for="valor6"><input type="radio" name="valor6" value="4">4</label>
+                    <br><br>
+                      <label for="preg7">7) Mantiene el interés del alumnado:</label>
+                      <label for="valor7"><input type="radio" name="valor7" value="1">1</label>
+                      <label for="valor7"><input type="radio" name="valor7" value="2">2</label>
+                      <label for="valor7"><input type="radio" name="valor7" value="3">3</label>
+                      <label for="valor7"><input type="radio" name="valor7" value="4">4</label>
+                    <br><br>
+                      <label for="preg8">8) Es adecuada la cantidad de trabajo que manda para realizar en casa:</label>
+                      <label for="valor8"><input type="radio" name="valor8" value="1">1</label>
+                      <label for="valor8"><input type="radio" name="valor8" value="2">2</label>
+                      <label for="valor8"><input type="radio" name="valor8" value="3">3</label>
+                      <label for="valor8"><input type="radio" name="valor8" value="4">4</label>
+                    <br><br>
+                      <label for="preg9">9) Es adecuada el tiempo que da para realizar los trabajos:</label>
+                      <label for="valor9"><input type="radio" name="valor9" value="1">1</label>
+                      <label for="valor9"><input type="radio" name="valor9" value="2">2</label>
+                      <label for="valor9"><input type="radio" name="valor9" value="3">3</label>
+                      <label for="valor9"><input type="radio" name="valor9" value="4">4</label>
+                    <br><br>
+                      <label for="preg10">10) Atiende a las peticiones del alumnado cuando son razonables:</label>
+                      <label for="valor10"><input type="radio" name="valor10" value="1">1</label>
+                      <label for="valor10"><input type="radio" name="valor10" value="2">2</label>
+                      <label for="valor10"><input type="radio" name="valor10" value="3">3</label>
+                      <label for="valor10"><input type="radio" name="valor10" value="4">4</label>
+                    <br><br>
+                      <label for="preg11">11) Se preocupa por el rendimiento del alumnado:</label>
+                      <label for="valor11"><input type="radio" name="valor11" value="1">1</label>
+                      <label for="valor11"><input type="radio" name="valor11" value="2">2</label>
+                      <label for="valor11"><input type="radio" name="valor11" value="3">3</label>
+                      <label for="valor11"><input type="radio" name="valor11" value="4">4</label>
+                    <br><br>
+                      <label for="preg12">12) No discrimina a ningún alumno/a ni establece favoritismos:</label>
+                      <label for="valor12"><input type="radio" name="valor12" value="1">1</label>
+                      <label for="valor12"><input type="radio" name="valor12" value="2">2</label>
+                      <label for="valor12"><input type="radio" name="valor12" value="3">3</label>
+                      <label for="valor12"><input type="radio" name="valor12" value="4">4</label>
+                    <br><br>
+                      <label for="preg13">13) Acepta las críticas del alumnado:</label>
+                      <label for="valor13"><input type="radio" name="valor13" value="1">1</label>
+                      <label for="valor13"><input type="radio" name="valor13" value="2">2</label>
+                      <label for="valor13"><input type="radio" name="valor13" value="3">3</label>
+                      <label for="valor13"><input type="radio" name="valor13" value="4">4</label>
+                    <br><br>
+                      <label for="preg14">14) Trata a los alumnos con respeto:</label>
+                      <label for="valor14"><input type="radio" name="valor14" value="1">1</label>
+                      <label for="valor14"><input type="radio" name="valor14" value="2">2</label>
+                      <label for="valor14"><input type="radio" name="valor14" value="3">3</label>
+                      <label for="valor14"><input type="radio" name="valor14" value="4">4</label>
+                    <br><br>
+                      <label for="preg15">15) Te parece suficiente la comunicación profesor - alumno:</label>
+                      <label for="valor15"><input type="radio" name="valor15" value="1">1</label>
+                      <label for="valor15"><input type="radio" name="valor15" value="2">2</label>
+                      <label for="valor15"><input type="radio" name="valor15" value="3">3</label>
+                      <label for="valor15"><input type="radio" name="valor15" value="4">4</label>
+                    <br><br>
+                      <label for="preg16">16) Explica al inicio del curso los criterios de calificación que se van a aplicar:</label>
+                      <label for="valor16"><input type="radio" name="valor16" value="1">1</label>
+                      <label for="valor16"><input type="radio" name="valor16" value="2">2</label>
+                      <label for="valor16"><input type="radio" name="valor16" value="3">3</label>
+                      <label for="valor16"><input type="radio" name="valor16" value="4">4</label>
+                    <br><br>
+                      <label for="preg17">17) Los contenidos de los exámenes o pruebas se ajustan a lo trabajado en clase:</label>
+                      <label for="valor17"><input type="radio" name="valor17" value="1">1</label>
+                      <label for="valor17"><input type="radio" name="valor17" value="2">2</label>
+                      <label for="valor17"><input type="radio" name="valor17" value="3">3</label>
+                      <label for="valor17"><input type="radio" name="valor17" value="4">4</label>
+                    <br><br>
+                      <label for="preg18">18) Valora todo el trabajo del alumnado:</label>
+                      <label for="valor18"><input type="radio" name="valor18" value="1">1</label>
+                      <label for="valor18"><input type="radio" name="valor18" value="2">2</label>
+                      <label for="valor18"><input type="radio" name="valor18" value="3">3</label>
+                      <label for="valor18"><input type="radio" name="valor18" value="4">4</label>
+                    <br><br>
+                      <label for="preg19">19) Enseña y comenta las pruebas escritas:</label>
+                      <label for="valor19"><input type="radio" name="valor19" value="1">1</label>
+                      <label for="valor19"><input type="radio" name="valor19" value="2">2</label>
+                      <label for="valor19"><input type="radio" name="valor19" value="3">3</label>
+                      <label for="valor19"><input type="radio" name="valor19" value="4">4</label>
+                    <br><br>
+                      <label for="preg20">20) Las notas que pone se ajustan a los criterios de calificación:</label>
+                      <label for="valor20"><input type="radio" name="valor20" value="1">1</label>
+                      <label for="valor20"><input type="radio" name="valor20" value="2">2</label>
+                      <label for="valor20"><input type="radio" name="valor20" value="3">3</label>
+                      <label for="valor20"><input type="radio" name="valor20" value="4">4</label>
+                    <br>
+              </form>
+            </fieldset>
+          </section>
+          <br>
+          <section id="seccion_4">
+            <fieldset>
+              <legend>Preguntas Respuesta Breve</legend>
+                <form class="formulario_3" name="formulario_3" action="index.html" method="post">
+                  <br>
+                  <div class="division_1">
+                    <label for="preg21">21) ¿Qué es lo que más de ha gustando de esta materia?</label><br>
+                    <textarea name="areatxt1" rows="4" cols="95"></textarea>
+                  </div>
+                  <br>
+                  <div class="division_2">
+                    <label for="preg22">22) ¿Qué es lo que menos te ha gustado?</label><br>
+                    <textarea name="areatxt2" rows="4" cols="95"></textarea>
+                  </div>
+                  <br>
+                  <div class="division_3">
+                    <label for="preg23">23) ¿Qué actividades incluirás o quitarías de clase?</label><br>
+                    <textarea name="areatxt3" rows="4" cols="95"></textarea>
+                  </div>
+                  <br>
+                  <div class="division_4">
+                    <label for="preg24">24) ¿Crees que el docente podría haber hecho algo más para que sacaras mejor nota o aprobaras? Explicarlo:</label><br>
+                    <textarea name="areatxt4" rows="4" cols="95"></textarea>
+                  </div>
+                  <br>
+                  <div class="division_5">
+                    <label for="preg25">25) Escribe cualquier otro comentario, crítica o sugerencia para mejorar la clase, la asignatura o el Centro:</label><br>
+                    <textarea name="areatxt5" rows="8" cols="95"></textarea>
+                  </div>
+                  <br>
+                </form>
+            </fieldset>
+          </section>
+        </main>
+        <br>
+        <footer>
+          <form class="formularioBoton" name="formularioBoton" action="cuestionarioPDF.html" method="post">
+            <label for=""></label>
+            <input type="button" name="butonCrearPDF" id="botonCrearPDF" value="CREAR PDF" onclick="creaPDF();">
+          </form>
+        </footer>
+  </body>
+</html>
